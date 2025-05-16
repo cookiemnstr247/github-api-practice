@@ -14,3 +14,8 @@ def test_get_branches_returns_list():
     assert isinstance(branches, list)
     assert len(branches) > 0
     assert "name" in branches[0]
+
+
+def test_format_repo_name():
+    repo = {"name": "github-api-practice"}
+    assert format_repo_name(repo) == "Github Api Practice"

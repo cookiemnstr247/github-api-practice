@@ -5,6 +5,9 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+def format_repo_name(repo):
+    return repo.get("name", "").replace("-", " ").title()
+
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 HEADERS = {
     "Authorization": f"token {GITHUB_TOKEN}",
